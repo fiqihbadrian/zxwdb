@@ -6,6 +6,7 @@ const path = require('path');
 const os = require('os');
 const open = require('open');
 const chalk = require('chalk');
+const getPort = require('get-port');
 
 // Mac Terminal theme colors
 const colors = {
@@ -40,11 +41,19 @@ const packageRoot = path.resolve(__dirname, '..');
 const backendDir = path.join(packageRoot, 'backend');
 
 let serverProcess = null;
-const port = process.env.PORT || 3001;
+let port = null; // Will be assigned dynamically
 const localIP = getLocalIP();
 
-// Start server
-function startServer() {
+// Start server with auto port detection
+async function startServer() {
+  // Find available port
+  const preferredPort = process.env.PORT || 3001;
+  port = await getPort({ port: preferredPort });
+  
+  if (port !== preferredPort) {
+    console.log(colors.warning('   ⚠️  Port ' + preferredPort + ' in use, using port ' + port + ' instead'));
+  }
+  
   return new Promise((resolve, reject) => {
     let serverStarted = false;
     let errorOccurred = false;
@@ -52,7 +61,7 @@ function startServer() {
     serverProcess = spawn('node', [path.join(backendDir, 'dist', 'index.js')], {
       cwd: backendDir,
       stdio: 'pipe',
-      env: { ...process.env, NODE_ENV: 'production' }
+      env: { ...process.env, NODE_ENV: 'production', PORT: port }
     });
 
     serverProcess.stdout.on('data', (data) => {
@@ -91,7 +100,7 @@ function startServer() {
     setTimeout(() => {
       if (errorOccurred) {
         serverProcess = null;
-        reject(new Error('Port ' + port + ' already in use'));
+        reject(new Error('Failed to start server'));
       } else {
         resolve();
       }
