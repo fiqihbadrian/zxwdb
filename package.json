@@ -28,8 +28,16 @@
     "sql",
     "query-builder"
   ],
-  "author": "",
+  "author": "Fiqih Badrian",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiqihbadrian/zxwdb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fiqihbadrian/zxwdb/issues"
+  },
+  "homepage": "https://github.com/fiqihbadrian/zxwdb#readme",
   "engines": {
     "node": ">=14.0.0"
   },
