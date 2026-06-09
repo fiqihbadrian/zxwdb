@@ -288,3 +288,9 @@ zxwdb
 **Made with ❤️ by Fiqih Badrian**
 
 **Enjoy designing databases visually!** 🚀
+
+Demo
+<img width="1680" height="850" alt="image" src="https://github.com/user-attachments/assets/6b5fdffd-ad54-4a39-b8c9-b7db88dbe9f8" />
+<img width="1680" height="852" alt="image" src="https://github.com/user-attachments/assets/f896fc29-1002-4094-b7be-8ebbb56e71f2" />
+<img width="1680" height="850" alt="image" src="https://github.com/user-attachments/assets/d637817c-4ce7-475b-a205-36fe51ed111f" />
+
