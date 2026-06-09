@@ -265,7 +265,7 @@ Need help? Have questions?
 
 - 📖 Run `zxwdb` → Choose "View Documentation"
 - 🐛 Report issues on GitHub
-- 📧 Contact: [your-email@example.com]
+- 📧 Contact: [fiqihbadrian@example.com]
 
 ---
 
