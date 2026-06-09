@@ -1,6 +1,6 @@
 {
   "name": "@fiqihbadrian/zxwdb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Visual Database Designer for MySQL/MariaDB - Design, visualize, and manage your database schema with ease",
   "main": "bin/zxwdb.js",
   "bin": {
