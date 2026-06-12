@@ -1,223 +1,208 @@
 # ZxwDB - Visual Database Designer & Query Builder
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/@fiqihbadrian/zxwdb.svg)](https://www.npmjs.com/package/@fiqihbadrian/zxwdb)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-Compatible-blue)](https://www.mysql.com/)
-[![MariaDB](https://img.shields.io/badge/MariaDB-Compatible-blue)](https://mariadb.org/)
 
-**ZxwDB** is a powerful visual database designer and query builder for MySQL and MariaDB databases. Design your database schema visually with an intuitive drag-and-drop interface, similar to draw.io, and automatically generate SQL scripts.
+**ZxwDB** is a powerful visual database designer and query builder for MySQL and MariaDB. Design your database schema visually with a drag-and-drop interface and execute SQL queries directly to your database.
 
-![ZxwDB Visual Database Designer](https://via.placeholder.com/800x400?text=ZxwDB+Visual+Database+Designer)
-
-## 🌟 Why ZxwDB?
-
-- **Visual Database Design** - Design your database schema using an intuitive canvas interface
-- **No SQL Knowledge Required** - Perfect for beginners and professionals alike
-- **Real-time SQL Generation** - See SQL code generated as you design
-- **Database Reverse Engineering** - Import and visualize existing database schemas
-- **ERD & LRS Support** - Entity Relationship Diagrams and Logical Relational Schema views
-- **Free & Open Source** - MIT licensed, use it anywhere
-
-## ✨ Key Features
-
-### 🎨 Visual Design Canvas
-- **Draw.io-like Interface** - Familiar and easy to use canvas for database design
-- **Drag & Drop Tables** - Create tables, columns, and relationships visually
-- **Real-time Preview** - See your database structure as you build it
-- **Zoom & Pan** - Navigate large database schemas with ease
-
-### 🔄 Entity Relationship Diagram (ERD)
-- **Visual Relationships** - See connections between tables clearly
-- **Foreign Key Visualization** - Understand data relationships at a glance
-- **Cardinality Indicators** - One-to-one, one-to-many, many-to-many relationships
-
-### 📊 Logical Relational Schema (LRS)
-- **Detailed Schema View** - See complete table definitions
-- **Data Types & Constraints** - Define columns, primary keys, foreign keys, indexes
-- **Normalization Support** - Design normalized database schemas
-
-### 🔌 Database Connection
-- **Local & Remote MySQL/MariaDB** - Connect to any MySQL or MariaDB database
-- **Secure Connections** - Support for SSL/TLS connections
-- **Multiple Databases** - Switch between different database connections
-
-### 📥 Import & Export
-- **Reverse Engineering** - Import existing database schemas automatically
-- **SQL Script Export** - Generate CREATE TABLE statements
-- **Migration Scripts** - Generate ALTER TABLE migration scripts
-- **Schema Comparison** - Compare and sync database schemas
-
-### ⚡ Real-time Features
-- **Live SQL Preview** - See generated SQL as you design
-- **Instant Validation** - Catch errors before deploying
-- **Auto-save** - Never lose your work
+---
 
 ## 🚀 Quick Start
-
-### Prerequisites
-
-Before installing ZxwDB, make sure you have:
-
-- **Node.js** version 14.0.0 or higher ([Download Node.js](https://nodejs.org/))
-- **MySQL** or **MariaDB** database server ([MySQL Download](https://www.mysql.com/downloads/) | [MariaDB Download](https://mariadb.org/download/))
-- **npm** (comes with Node.js)
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/fiqihbadrian/ZxwDB.git
-cd ZxwDB
-
-# Install all dependencies (frontend + backend)
-npm run install:all
+npm install -g @fiqihbadrian/zxwdb
 ```
 
-### Running ZxwDB
+### Run
 
 ```bash
-# Start both frontend and backend servers
-npm run dev
+zxwdb
 ```
 
-The application will start on:
+Application will run on:
 - **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:3001
-
-### First Time Setup
-
-1. Open http://localhost:5173 in your browser
-2. Click "Connect Database" 
-3. Enter your MySQL/MariaDB connection details:
-   - Host: `localhost` (or your database server IP)
-   - Port: `3306` (default MySQL/MariaDB port)
-   - Username: your database username
-   - Password: your database password
-   - Database: your database name
-4. Start designing your database!
-
-## 📖 Documentation
-
-- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
-- [Installation Guide](INSTALL.md) - Detailed installation instructions
-- [Features Overview](FEATURES.md) - Complete feature documentation
-- [Auto Update Feature](AUTO_UPDATE_FEATURE.md) - How auto-updates work
-- [Getting Started Tutorial](START.md) - Step-by-step tutorial
-
-## 💻 Project Structure
-
-```
-zxwdb/
-├── frontend/              # React + TypeScript frontend application
-│   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── hooks/        # Custom React hooks
-│   │   ├── stores/       # Zustand state management
-│   │   ├── types/        # TypeScript type definitions
-│   │   └── utils/        # Utility functions
-│   └── package.json
-│
-├── backend/              # Node.js + Express backend API
-│   ├── src/
-│   │   ├── routes/      # API routes
-│   │   ├── controllers/ # Business logic
-│   │   ├── models/      # Data models
-│   │   └── utils/       # Utility functions
-│   └── package.json
-│
-├── bin/                  # CLI executable
-├── scripts/              # Build and deployment scripts
-├── README.md            # This file
-└── package.json         # Root package configuration
-```
-
-## 🛠️ Technology Stack
-
-### Frontend Technologies
-- **React 18** - Modern UI library
-- **TypeScript** - Type-safe JavaScript
-- **ReactFlow** - Canvas and diagram visualization
-- **TailwindCSS** - Utility-first CSS framework
-- **Zustand** - Lightweight state management
-- **Axios** - HTTP client for API calls
-- **Vite** - Fast frontend build tool
-
-### Backend Technologies
-- **Node.js** - JavaScript runtime
-- **Express.js** - Web application framework
-- **mysql2** - MySQL client for Node.js
-- **CORS** - Cross-origin resource sharing
-
-## 🎯 Use Cases
-
-### For Beginners
-- Learn database design without writing SQL
-- Understand table relationships visually
-- Practice database normalization
-
-### For Developers
-- Rapid prototyping of database schemas
-- Visualize existing database structures
-- Generate migration scripts for version control
-- Design databases for new projects
-
-### For Database Administrators
-- Document existing database schemas
-- Plan database migrations
-- Optimize database structure
-- Create training materials
-
-### For Teams
-- Collaborate on database design
-- Share visual database diagrams
-- Standardize database design practices
-
-## 📦 Building for Production
-
-```bash
-# Build optimized production version
-npm run build
-
-# The built application will be in backend/public/
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🐛 Bug Reports & Feature Requests
-
-Found a bug or have a feature request? Please open an issue on [GitHub Issues](https://github.com/fiqihbadrian/ZxwDB/issues).
-
-## ⭐ Show Your Support
-
-If you find ZxwDB helpful, please consider giving it a star on GitHub! It helps others discover the project.
-
-## 📧 Contact
-
-- **GitHub**: [@fiqihbadrian](https://github.com/fiqihbadrian)
-- **Repository**: [ZxwDB](https://github.com/fiqihbadrian/ZxwDB)
-
-## 🔗 Related Projects
-
-- [MySQL Workbench](https://www.mysql.com/products/workbench/) - Official MySQL design tool
-- [dbdiagram.io](https://dbdiagram.io/) - Online database diagram tool
-- [DBeaver](https://dbeaver.io/) - Universal database tool
-
-## 📊 Keywords
-
-Database design, MySQL designer, MariaDB designer, visual database, ERD tool, database diagram, SQL generator, database modeling, schema designer, database visualization, open source database tool, free database designer, web-based database tool, database management, SQL builder, database reverse engineering
+- **Backend**: http://localhost:3001
 
 ---
 
-Made with ❤️ by [Fiqih Badrian](https://github.com/fiqihbadrian)
+## 🎯 Core Features
+
+### 1. 🎨 Visual Database Design
+- **ERD (Entity Relationship Diagram)** - Visualize table relationships
+- **LRS (Logical Relational Schema)** - Detailed table structure view
+- **Drag & Drop** - Design databases with an intuitive interface
+- **Auto-arrange** - Automatically organize table layouts
+- **Reverse Engineering** - Import and visualize existing databases
+
+### 2. 💾 Database Management
+- **Connect to MySQL/MariaDB** - Local or remote databases
+- **Multi-database Support** - Switch between databases easily
+- **Real-time Sync** - Changes saved directly to database
+- **Browse Data** - View, edit, add, and delete table data
+- **Foreign Key Management** - Manage table relationships
+
+### 3. 🔧 SQL Editor with Real-time Console
+- **Execute All SQL Types** - SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP
+- **Real-time Console Output** - Query execution status with timestamps
+- **Auto-save to Database** - Queries executed and saved immediately
+- **Keyboard Shortcuts** - Ctrl/Cmd+Enter to run queries
+- **Error Handling** - Clear and informative error messages
+- **Execution Details** - Execution time, affected rows, insert ID
+- **4 Message Types** - Success, Error, Warning, Info with color codes
+
+### 4. 📦 Complete Database Export
+- **Complete SQL Export** - CREATE TABLE + INSERT data + Foreign Keys
+- **Include All Data** - All table data exported in INSERT statements
+- **Foreign Key Constraints** - Table relationships included
+- **One-click Download** - Download complete SQL file
+- **Safe Re-import** - DROP IF EXISTS & FOREIGN_KEY_CHECKS
+- **Production Ready** - Safe for database migration
+
+### 5. ⚡ Table Operations
+- **Add/Edit/Delete Tables** - Manage tables visually
+- **Column Management** - Add, edit, delete columns
+- **Primary/Foreign Keys** - Set primary key and foreign key constraints
+- **Data Types** - Support all MySQL/MariaDB data types
+- **Undo/Redo** - Ctrl+Z/Ctrl+Y for undo/redo changes
+
+---
+
+## 📖 How to Use
+
+### 1. Connect to Database
+- Click "Connect to Database"
+- Enter MySQL/MariaDB credentials:
+  - Host: `localhost` or server IP
+  - Port: `3306` (default)
+  - Username & Password
+  - Database name
+- Click Connect
+
+### 2. Design Database
+- **Add Table**: Click "Add Table" to create new table
+- **Edit Table**: Double-click table to edit structure
+- **Add Relationship**: Drag from foreign key column to primary key of another table
+- **Browse Data**: Click "Browse Data" to view table contents
+
+### 3. SQL Editor
+- Click "SQL Editor" in toolbar
+- Type SQL query (SELECT, INSERT, UPDATE, DELETE, etc.)
+- Press `Ctrl+Enter` or click "Run Query"
+- View results in Results panel
+- View execution status in Console panel with timestamps
+
+### 4. Export Complete Database
+- Click "Preview SQL" in toolbar
+- Complete SQL (structure + data + foreign keys) will be displayed
+- Click "Download SQL File" to download
+- Import SQL file to another database
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl/Cmd + Enter` | Run SQL Query |
+| `Ctrl/Cmd + N` | Add New Table |
+| `Ctrl/Cmd + B` | Browse Data |
+| `Ctrl/Cmd + P` | Preview SQL |
+| `Ctrl/Cmd + K` | Quick Search |
+| `Ctrl/Cmd + Z` | Undo |
+| `Ctrl/Cmd + Shift + Z` | Redo |
+| `ESC` | Close/Cancel |
+
+---
+
+## 💻 Technology Stack
+
+- **Frontend**: React 18, TypeScript, TailwindCSS, ReactFlow, Zustand
+- **Backend**: Node.js, Express.js, mysql2
+- **Build Tool**: Vite with Terser minification
+
+---
+
+## 🔒 Code Protection
+
+This package uses advanced code protection:
+- ✅ **Minified Production Build** - Code is heavily minified and optimized
+- ✅ **Aggressive Compression** - 3-pass Terser compression with unsafe optimizations
+- ✅ **Name Mangling** - All variable and function names obfuscated to single letters
+- ✅ **Read-only in node_modules** - Files cannot be edited by users
+- ✅ **MIT License** - Users must provide attribution
+
+**Note**: Source code is protected using industry-standard minification techniques to make reverse engineering significantly more difficult.
+
+---
+
+## 📋 Requirements
+
+- Node.js >= 14.0.0
+- MySQL >= 5.7 or MariaDB >= 10.2
+- Modern browser (Chrome, Firefox, Safari, Edge)
+
+---
+
+## 🛠️ Troubleshooting
+
+### Port Already in Use
+If port 3001 or 5173 is already in use, the application will notify you. Stop other services or change the port in configuration.
+
+### Can't Connect to Database
+1. Check database is running: `mysql -u root -p`
+2. Verify credentials (host, port, username, password)
+3. Ensure MySQL/MariaDB allows connections
+
+### Server Won't Start
+1. Check Node.js version: `node --version` (>= 14.0.0)
+2. Reinstall: `npm install -g @fiqihbadrian/zxwdb`
+
+---
+
+## 📦 Update
+
+Update to latest version:
+```bash
+npm update -g @fiqihbadrian/zxwdb
+# or
+npm install -g @fiqihbadrian/zxwdb@latest
+```
+
+---
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+---
+
+## 🐛 Issues & Support
+
+Found a bug or need help?
+
+**GitHub Issues**: https://github.com/fiqihbadrian/ZxwDB/issues
+
+---
+
+## ⭐ Features Highlight
+
+✅ Visual database design with drag & drop  
+✅ ERD & LRS views  
+✅ SQL Editor with real-time console output  
+✅ Complete database export (structure + data + foreign keys)  
+✅ Browse, add, edit, delete table data  
+✅ Reverse engineering from existing database  
+✅ Multi-database support  
+✅ Undo/Redo support  
+✅ Keyboard shortcuts  
+✅ Auto-save to database  
+✅ Protected code with advanced minification  
+
+---
+
+**Made with ❤️ by [Fiqih Badrian](https://github.com/fiqihbadrian)**
+
+**Repository**: https://github.com/fiqihbadrian/ZxwDB
